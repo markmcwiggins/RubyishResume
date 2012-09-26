@@ -1,0 +1,23 @@
+<h1>Listing profsocieties</h1>
+
+<table>
+  <tr>
+    <th>Socname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profsocieties.each do |profsociety| %>
+  <tr>
+    <td><%= profsociety.socname %></td>
+    <td><%= link_to 'Show', profsociety %></td>
+    <td><%= link_to 'Edit', edit_profsociety_path(profsociety) %></td>
+    <td><%= link_to 'Destroy', profsociety, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profsociety', new_profsociety_path %>

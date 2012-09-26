@@ -1,0 +1,2 @@
+module ProfsocietiesHelper
+end

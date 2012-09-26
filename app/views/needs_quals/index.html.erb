@@ -1,0 +1,36 @@
+<h1>Mark McWiggins' Resume: Page 1</h1>
+
+<table>
+  <tr>
+    <th>Your Needs</th>
+    <th>My Qualifications</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @needs_quals.each do |needs_qual| %>
+  <tr>
+    <td><%= needs_qual.yourneeds %></td>
+    <td><%= needs_qual.myquals %></td>
+    <td><%= link_to 'Show', needs_qual %></td>
+    <td><%= link_to 'Edit', edit_needs_qual_path(needs_qual) %></td>
+    <td><%= link_to 'Destroy', needs_qual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Needs qual', new_needs_qual_path %>
+<hr>
+<table>
+<tr><td><%= link_to 'Page 1', needs_quals_path %></td>
+<td><%= link_to 'Education', edus_path %></td>
+<td><%= link_to 'Contact', contactinfos_path %></td>
+<td><%= link_to 'Summary', summaries_path %></td>
+<td><%= link_to 'Experience', experiencedetails_path %></td>
+<td><%= link_to 'Bibliography',bibliographies_path %></td>
+<td><%= link_to 'Professional Societies',profsocieties_path %></td>
+</tr>
+</table>

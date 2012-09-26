@@ -1,0 +1,34 @@
+<h1>Mark McWiggins' Professional Society Affiliations</h1>
+
+<table>
+  <tr>
+    <th>Society Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profsocieties.each do |profsociety| %>
+  <tr>
+    <td><%= profsociety.socname %></td>
+    <td><%= link_to 'Show', profsociety %></td>
+    <td><%= link_to 'Edit', edit_profsociety_path(profsociety) %></td>
+    <td><%= link_to 'Destroy', profsociety, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profsociety', new_profsociety_path %><br />
+<hr>
+<table>
+<tr><td><%= link_to 'Page 1', needs_quals_path %></td>
+<td><%= link_to 'Education', edus_path %></td>
+<td><%= link_to 'Contact', contactinfos_path %></td>
+<td><%= link_to 'Summary', summaries_path %></td>
+<td><%= link_to 'Experience', experiencedetails_path %></td>
+<td><%= link_to 'Bibliography',bibliographies_path %></td>
+<td><%= link_to 'Professional Societies',profsocieties_path %></td>
+</tr>
+</table>

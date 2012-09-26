@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @bibliography.title %>
+</p>
+
+<p>
+  <b>Author or url:</b>
+  <%= @bibliography.author_or_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_bibliography_path(@bibliography) %> |
+<%= link_to 'Back', bibliographies_path %>

@@ -1,0 +1,23 @@
+<h1>Listing experiencedetails</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @experiencedetails.each do |experiencedetail| %>
+  <tr>
+    <td><%= experiencedetail.description %></td>
+    <td><%= link_to 'Show', experiencedetail %></td>
+    <td><%= link_to 'Edit', edit_experiencedetail_path(experiencedetail) %></td>
+    <td><%= link_to 'Destroy', experiencedetail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Experiencedetail', new_experiencedetail_path %>

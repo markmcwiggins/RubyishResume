@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Yourneeds:</b>
+  <%= @needs_qual.yourneeds %>
+</p>
+
+<p>
+  <b>Myquals:</b>
+  <%= @needs_qual.myquals %>
+</p>
+
+
+<%= link_to 'Edit', edit_needs_qual_path(@needs_qual) %> |
+<%= link_to 'Back', needs_quals_path %>

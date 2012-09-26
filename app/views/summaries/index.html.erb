@@ -1,0 +1,34 @@
+<h1>Summary of Experience for Mark McWiggins</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @summaries.each do |summary| %>
+  <tr>
+    <td><pre><%= h summary.description %></pre></td>
+    <td><%= link_to 'Show', summary %></td>
+    <td><%= link_to 'Edit', edit_summary_path(summary) %></td>
+    <td><%= link_to 'Destroy', summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Summary', new_summary_path %>
+<hr>
+<table>
+<tr><td><%= link_to 'Page 1', needs_quals_path %></td>
+<td><%= link_to 'Education', edus_path %></td>
+<td><%= link_to 'Contact', contactinfos_path %></td>
+<td><%= link_to 'Summary', summaries_path %></td>
+<td><%= link_to 'Experience', experiencedetails_path %></td>
+<td><%= link_to 'Bibliography',bibliographies_path %></td>
+<td><%= link_to 'Professional Societies',profsocieties_path %></td>
+</tr>
+</table>

@@ -1,0 +1,25 @@
+<%= form_for(@needs_qual) do |f| %>
+  <% if @needs_qual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@needs_qual.errors.count, "error") %> prohibited this needs_qual from being saved:</h2>
+
+      <ul>
+      <% @needs_qual.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :yourneeds %><br />
+    <%= f.text_area :yourneeds %>
+  </div>
+  <div class="field">
+    <%= f.label :myquals %><br />
+    <%= f.text_area :myquals %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

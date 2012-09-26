@@ -1,0 +1,35 @@
+<h1>Mark McWiggins' contact information</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @contactinfos.each do |contactinfo| %>
+  <tr>
+    <td><pre><%= h contactinfo.contact  %></pre></td>
+    <td><%= link_to 'Show', contactinfo %></td>
+    <td><%= link_to 'Edit', edit_contactinfo_path(contactinfo) %></td>
+    <td><%= link_to 'Destroy', contactinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contactinfo', new_contactinfo_path %>
+<hr>
+<table>
+<tr><td><%= link_to 'Page 1', needs_quals_path %></td>
+<td><%= link_to 'Education', edus_path %></td>
+<td><%= link_to 'Contact', contactinfos_path %></td>
+<td><%= link_to 'Summary', summaries_path %></td>
+<td><%= link_to 'Experience', experiencedetails_path %></td>
+<td><%= link_to 'Bibliography',bibliographies_path %></td>
+<td><%= link_to 'Professional Societies',profsocieties_path %></td>
+</tr>
+</table>
